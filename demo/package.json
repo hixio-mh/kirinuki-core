@@ -21,18 +21,22 @@
     "react-micro-container": "1.2.0",
     "recompose": "0.30.0",
     "semantic-ui-css": "2.4.1",
-    "semantic-ui-react": "1.2.1"
+    "semantic-ui-react": "1.2.1",
+    "snyk": "^1.439.0"
   },
   "scripts": {
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "@babel/core": "7.11.6",
     "@babel/preset-env": "7.11.5",
     "@babel/preset-react": "7.10.4",
     "@babel/runtime": "7.11.2"
-  }
+  },
+  "snyk": true
 }
